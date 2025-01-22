@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@ffmpeg/core':
-        specifier: ^0.12.10
-        version: 0.12.10
       '@ffmpeg/ffmpeg':
         specifier: ^0.10.1
         version: 0.10.1
@@ -76,10 +73,6 @@ packages:
   '@eslint/plugin-kit@0.2.5':
     resolution: {integrity: sha512-lB05FkqEdUg2AA0xEbUz0SnkXT1LcCTa438W4IWTUh4hdOnVbQyOJ81OrDXsJk/LSiJHubgGEFoR5EHq1NsH1A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@ffmpeg/core@0.12.10':
-    resolution: {integrity: sha512-dzNplnn2Nxle2c2i2rrDhqcB19q9cglCkWnoMTDN9Q9l3PvdjZWd1HfSPjCNWc/p8Q3CT+Es9fWOR0UhAeYQZA==}
-    engines: {node: '>=16.x'}
 
   '@ffmpeg/ffmpeg@0.10.1':
     resolution: {integrity: sha512-ChQkH7Rh57hmVo1LhfQFibWX/xqneolJKSwItwZdKPcLZuKigtYAYDIvB55pDfP17VtR1R77SxgkB2/UApB+Og==}
@@ -1473,8 +1466,6 @@ snapshots:
     dependencies:
       '@eslint/core': 0.10.0
       levn: 0.4.1
-
-  '@ffmpeg/core@0.12.10': {}
 
   '@ffmpeg/ffmpeg@0.10.1':
     dependencies:
