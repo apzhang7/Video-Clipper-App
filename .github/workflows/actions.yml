@@ -3,16 +3,16 @@ description: "Setup Node.js, Install dependencies, and Deploy"
 runs:
   using: "composite"
   steps:
-    - name: setup Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: 20
 
-    - name: install pnpm
+    - name: Install pnpm
       shell: bash
       run: npm install -g pnpm
 
-    - name: pnpm modules
+    - name: Cache pnpm modules
       uses: actions/cache@v3
       with:
         path: ~/.pnpm-store
@@ -20,16 +20,16 @@ runs:
         restore-keys: |
           ${{ runner.os }}-pnpm-
 
-    - name: install FFmpeg
+    - name: Install dependencies
       shell: bash
       run: |
         pnpm install
         pnpm install @ffmpeg/ffmpeg @ffmpeg/core
 
-    - name: setup FFmpeg
+    - name: Setup FFmpeg
       uses: FedericoCarboni/setup-ffmpeg@v3
 
-    - name: build and start the app
+    - name: Build and start the app
       shell: bash
       run: |
         cd video-clipper-app
