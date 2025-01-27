@@ -19,27 +19,27 @@ jobs:
           node-version: 20
 
       - name: Install pnpm
-        run: npm install -g pnpm
-
-      - name: Cache pnpm modules
-        uses: actions/cache@v3
+        uses: pnpm/action-setup@v2
         with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
+          version: 8
 
       - name: Install dependencies
         run: |
+          cd app
           pnpm install
           pnpm install @ffmpeg/ffmpeg @ffmpeg/core
 
       - name: Setup FFmpeg
         uses: FedericoCarboni/setup-ffmpeg@v3
 
-      - name: Build and start the app
+      - name: Build the app
         run: |
-          cd video-clipper-app
-          pnpm i
+          cd app
           pnpm build
-          pnpm start
+          pnpm export
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./app/out
