@@ -95,6 +95,8 @@ function App() {
     setStartTimeSec(0);
     setEndTimeMin(0);
     setEndTimeSec(0);
+    setTrimStart(0);
+    setTrimEnd(10);
   };
 
   const handleClipVideo = () => { //what to do with file when its clipped
