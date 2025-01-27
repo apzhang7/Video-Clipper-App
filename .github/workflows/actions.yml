@@ -1,0 +1,39 @@
+name: setup-node-and-deploy
+description: "Setup Node.js, Install dependencies, and Deploy"
+runs:
+  using: "composite"
+  steps:
+    - name: setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: install pnpm
+      shell: bash
+      run: npm install -g pnpm
+
+    - name: pnpm modules
+      uses: actions/cache@v3
+      with:
+        path: ~/.pnpm-store
+        key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-
+
+    - name: install FFmpeg
+      shell: bash
+      run: |
+        pnpm install
+        pnpm install @ffmpeg/ffmpeg @ffmpeg/core
+
+    - name: setup FFmpeg
+      uses: FedericoCarboni/setup-ffmpeg@v3
+
+    - name: build and start the app
+      shell: bash
+      run: |
+        cd video-clipper-app
+        pnpm i
+        pnpm build
+        pnpm start
+      run: npm ci
