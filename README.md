@@ -1,5 +1,5 @@
 # LI Sprintern 2025 project 
-thank you to break through tech for the opportunity!
+- thank you to break through tech for the opportunity!
 ---
 
 Created by: Amaya, Angela, Fiona, Tesneem, and Yeni
