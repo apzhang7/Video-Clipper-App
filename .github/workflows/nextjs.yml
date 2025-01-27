@@ -34,11 +34,11 @@ jobs:
           version: 8
       - name: Install dependencies
         run: |
-          cd video-clipper-app
+          cd app
           pnpm install
       - name: Build with Next.js
         run: |
-          cd video-clipper-app
+          cd app
           pnpm build
           pnpm export
       - name: Upload artifact
