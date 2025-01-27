@@ -1,8 +1,8 @@
-# sprintern-2025-video-trimmer
-LI Sprintern 2025 project 
+# LI Sprintern 2025 project 
+thank you to break through tech for the opportunity!
 ---
 
-Created with: Amaya, Angela, Fiona, Tesneem, and Yeni
+Created by: Amaya, Angela, Fiona, Tesneem, and Yeni
 
 Mentors: Austin Bennett, Isabelle Xu
 
