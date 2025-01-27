@@ -36,4 +36,3 @@ runs:
         pnpm i
         pnpm build
         pnpm start
-      run: npm ci
