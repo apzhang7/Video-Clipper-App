@@ -1,4 +1,4 @@
-# LI Sprintern 2025 project 
+# Sprintern 2025 project 
 - thank you to Break Through Tech for the opportunity!
 ---
 
