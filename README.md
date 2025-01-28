@@ -18,14 +18,14 @@ npm install -g pnpm
 sudo npm install -g pnpm
 ```
 
+* IMPORTANT: the next commands have to be in video-clipper-app
+```
+cd app
+```
+
 * allows the use of ffmpeg
 ```
 pnpm install @ffmpeg/ffmpeg @ffmpeg/core
-```
-
-* IMPORTANT: the next commands have to be in video-clipper-app
-```
-cd video-clipper-app
 ```
 
 * initialize 
@@ -36,5 +36,8 @@ pnpm i
 * deploy the website
 ```
 pnpm dev
+```
+```
+npm run dev
 ```
 
