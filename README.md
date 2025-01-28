@@ -18,7 +18,7 @@ npm install -g pnpm
 sudo npm install -g pnpm
 ```
 
-* IMPORTANT: the next commands have to be in video-clipper-app
+* IMPORTANT: the next commands have to be in app
 ```
 cd app
 ```
