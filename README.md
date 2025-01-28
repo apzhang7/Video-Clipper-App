@@ -10,7 +10,7 @@ Mentors: Austin Bennett, Isabelle Xu
 
 # Install and Execution instructions:
 
-* downloads pnpm which we need (sudo for mac users)
+* downloads pnpm which we need(sudo for mac users)
 ```
 npm install -g pnpm
 ```
@@ -26,11 +26,6 @@ cd app
 * allows the use of ffmpeg
 ```
 pnpm install @ffmpeg/ffmpeg @ffmpeg/core
-```
-
-* initialize 
-```
-pnpm i
 ```
 
 * deploy the website
